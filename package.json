@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "cypress": "^13.8.1",
