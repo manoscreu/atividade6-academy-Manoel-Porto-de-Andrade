@@ -3,6 +3,7 @@ export default class CadastroPage {
   inputEmail = "#email";
   buttonSalvar = ".sc-dAlyuH";
   buttonVoltar = "[href='/users']"
+  erroCadastro = ".sc-cPiKLX.feFrSQ"
 
   typeNome(nome){
     cy.get(this.inputNome).type(nome)

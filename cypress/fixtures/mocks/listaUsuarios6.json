@@ -1,0 +1,44 @@
+[
+    {
+    "id": "8f29fa7a-93f3-4b78-9a96-0d4ab7ac5c3a",
+    "name": "Pedro Martins",
+    "email": "isabelly6@yahoo.com",
+    "createdAt": "2024-05-04T02:04:42.152Z",
+    "updatedAt": "2024-05-04T02:04:42.152Z"
+  },
+  {
+    "id": "e374e015-9bfb-4eb5-8279-aee110d2096c",
+    "name": "Tommy Conn",
+    "email": "jessy_hessel@gmail.com",
+    "createdAt": "2024-05-04T02:04:52.418Z",
+    "updatedAt": "2024-05-04T02:04:52.418Z"
+  },
+  {
+    "id": "632467f4-a619-489b-9bae-10d37eeba9ac",
+    "name": "Mr. Shawn Gibson",
+    "email": "odie_sawayn-lynch6@yahoo.com",
+    "createdAt": "2024-05-04T02:04:55.275Z",
+    "updatedAt": "2024-05-04T02:04:55.275Z"
+  },
+  {
+    "id": "4c3ffa3f-139b-42b4-88ce-da129e8858e3",
+    "name": "Alessandra Xavier",
+    "email": "mariana_pereira37@yahoo.com",
+    "createdAt": "2024-05-04T02:04:56.493Z",
+    "updatedAt": "2024-05-04T02:04:56.493Z"
+  },
+  {
+    "id": "8edd2c41-fbd6-45bf-b2f3-faa06ce94e3c",
+    "name": "Mrs. Janice Christiansen",
+    "email": "rogers.rau20@hotmail.com",
+    "createdAt": "2024-05-04T02:05:55.626Z",
+    "updatedAt": "2024-05-04T02:05:55.626Z"
+  },
+  {
+    "id": "f8c931ba-ae9a-437b-9eb0-21638214042d",
+    "name": "Gustavo Gibson",
+    "email": "chauncey_purdy95@gmail.com",
+    "createdAt": "2024-05-04T02:05:57.651Z",
+    "updatedAt": "2024-05-04T02:05:57.651Z"
+  }
+]

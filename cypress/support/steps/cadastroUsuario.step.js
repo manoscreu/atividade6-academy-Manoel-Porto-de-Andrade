@@ -51,15 +51,15 @@ When("informo um nome muito longo", function () {
 });
 
 Then("o sistema deve apresentar o erro de nome invalido", function () {
-  cy.get(".sc-cPiKLX.feFrSQ").should("be.visible");
-  cy.get(".sc-cPiKLX")
+  cy.get(paginaCadastro.erroCadastro).should("be.visible");
+  cy.get(paginaCadastro.erroCadastro)
     .invoke("text")
     .should("equal", "O campo nome é obrigatório.");
 });
 
 Then("o sistema deve apresentar o erro de nome muito longo", function () {
-  cy.get(".sc-cPiKLX.feFrSQ").should("be.visible");
-  cy.get(".sc-cPiKLX")
+  cy.get(paginaCadastro.erroCadastro).should("be.visible");
+  cy.get(paginaCadastro.erroCadastro)
     .invoke("text")
     .should("equal", "Informe no máximo 100 caracteres para o nome");
 });
@@ -75,22 +75,22 @@ Then(
 );
 
 Then("o sistema deve avisar que o campo email é obrigatorio", function () {
-  cy.get(".sc-cPiKLX.feFrSQ").should("be.visible");
-  cy.get(".sc-cPiKLX.feFrSQ")
+  cy.get(paginaCadastro.erroCadastro).should("be.visible");
+  cy.get(paginaCadastro.erroCadastro)
     .invoke("text")
     .should("equal", "O campo e-mail é obrigatório.");
 });
 
 Then("o sistema deve avisar que o formato do email é invalido", function () {
-  cy.get(".sc-cPiKLX.feFrSQ").should("be.visible");
-  cy.get(".sc-cPiKLX.feFrSQ")
+  cy.get(paginaCadastro.erroCadastro).should("be.visible");
+  cy.get(paginaCadastro.erroCadastro)
     .invoke("text")
     .should("equal", "Formato de e-mail inválido");
 });
 
 Then("o sistema deve avisar que o email é muito longo", function () {
-  cy.get(".sc-cPiKLX.feFrSQ").should("be.visible");
-  cy.get(".sc-cPiKLX.feFrSQ")
+  cy.get(paginaCadastro.erroCadastro).should("be.visible");
+  cy.get(paginaCadastro.erroCadastro)
     .invoke("text")
     .should("equal", "Informe no máximo 60 caracteres para o e-mail");
 });
