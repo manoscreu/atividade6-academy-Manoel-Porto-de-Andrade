@@ -1,7 +1,6 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import CadastroPage from "../pages/cadastro.page.js";
 import InicialPage from "../pages/inicial.page.js";
-import { expect } from "chai";
 const paginaInicial = new InicialPage();
 
 Given("que não existam usuarios cadastrados no sistema", function () {
@@ -22,6 +21,26 @@ Given("que existam mais de 6 usuarios cadastrados", function () {
 
 When("acesso a pagina de listagem de usuario", function () {
   cy.visit("https://rarocrud-frontend-88984f6e4454.herokuapp.com/users");
+});
+When("dar a opção de criar um novo usuario", function () {
+  cy.get(paginaInicial.buttonNovo).should("be.visible");
+  cy.get(paginaInicial.buttonNovo)
+    .get("p")
+    .invoke("text")
+    .should("equal", "Cadastre um novo usuário");
+});
+When("deve ser possivel trocar de paginas", function () {
+  cy.get(paginaInicial.paginaVoltar).should("be.disabled")
+  cy.get(paginaInicial.paginaProximo).should("be.enabled")
+  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","1 de 3")
+  paginaInicial.clickProximaPagina()
+  cy.get(paginaInicial.paginaVoltar).should("be.enabled")
+  cy.get(paginaInicial.paginaProximo).should("be.enabled")
+  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","2 de 3")
+  paginaInicial.clickProximaPagina()
+  cy.get(paginaInicial.paginaVoltar).should("be.enabled")
+  cy.get(paginaInicial.paginaProximo).should("be.disabled")
+  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","3 de 3")
 });
 
 Then(
@@ -57,23 +76,4 @@ Then("o sistema deve exibir todos os usuarios cadastrados", function () {
   cy.wait("@listaUsers");
 });
 
-And("dar a opção de criar um novo usuario", function () {
-  cy.get(paginaInicial.buttonNovo).should("be.visible");
-  cy.get(paginaInicial.buttonNovo)
-    .get("p")
-    .invoke("text")
-    .should("equal", "Cadastre um novo usuário");
-});
-And("deve ser possivel trocar de paginas", function () {
-  cy.get(paginaInicial.paginaVoltar).should("be.disabled")
-  cy.get(paginaInicial.paginaProximo).should("be.enabled")
-  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","1 de 3")
-  paginaInicial.clickProximaPagina()
-  cy.get(paginaInicial.paginaVoltar).should("be.enabled")
-  cy.get(paginaInicial.paginaProximo).should("be.enabled")
-  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","2 de 3")
-  paginaInicial.clickProximaPagina()
-  cy.get(paginaInicial.paginaVoltar).should("be.enabled")
-  cy.get(paginaInicial.paginaProximo).should("be.disabled")
-  cy.get(paginaInicial.paginasTotalAtual).invoke("text").should("equal","3 de 3")
-});
+

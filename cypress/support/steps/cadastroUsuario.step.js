@@ -1,9 +1,10 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import CadastroPage from "../pages/cadastro.page.js";
 import InicialPage from "../pages/inicial.page.js"
 import { faker } from "@faker-js/faker";
 const paginaInicial = new InicialPage();
 const paginaCadastro = new CadastroPage();
+
 Given("que acesso a funcionalidade de cadastro", function () {
   cy.visit("https://rarocrud-frontend-88984f6e4454.herokuapp.com/users");
   paginaInicial.clickNovo();
