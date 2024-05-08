@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import CadastroPage from "../pages/cadastro.page.js";
 import InicialPage from "../pages/inicial.page.js"
-import { faker } from "@faker-js/faker";
+import { faker, fakerPT_BR } from "@faker-js/faker";
 const paginaInicial = new InicialPage();
 const paginaCadastro = new CadastroPage();
 
@@ -11,7 +11,7 @@ Given("que acesso a funcionalidade de cadastro", function () {
 });
 
 When("informo um novo nome", function () {
-  var nome = faker.person.firstName();
+  var nome = fakerPT_BR.person.firstName();
   cy.wrap(nome).as("nomeFaker");
   paginaCadastro.typeNome(nome);
 });
