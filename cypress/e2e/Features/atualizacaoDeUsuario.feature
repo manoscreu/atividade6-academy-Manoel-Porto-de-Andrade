@@ -4,7 +4,7 @@ Contexto: Atualização de usuario
     Dado o usuario ja esta cadastrado no sistema
 
 Cenario: Caso nenhum usuário seja localizado pelo identificador único, a atualização não deve ser realizada.
-    Quando busco por um identificador invalido   d
+    Quando busco por um identificador invalido
     Então o sistema deve exibir um aviso de usuario não encontrado
 
 Cenário:Não deve ser possível atualizar um usuário com um email ja em uso
